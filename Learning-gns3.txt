@@ -1,0 +1,168 @@
+Perfect! Let’s make a **complete roadmap for GNS3 + Network Security + Firewall** so you can **practice, learn, and get job-ready**. I’ll organize it step by step: basics → advanced → labs → job interview preparation.
+
+---
+
+# 🟢 PHASE 1 – GNS3 & Networking Basics
+
+### 1️⃣ Learn GNS3
+
+* Install GNS3 + GNS3 VM
+* Learn interface: drag devices, connect, start, console
+* Add devices: Cisco IOS, switches, routers, cloud, firewall VM
+* Save/load projects
+
+### 2️⃣ Basic Networking Commands (Cisco IOS)
+
+* **Device Setup:** `hostname`, `enable secret`, `line console`, `line vty`, `banner`
+* **Interfaces:** `interface g0/0`, `ip address`, `no shutdown`, `description`
+* **Verification:** `show ip interface brief`, `show running-config`, `show version`
+* **Routing:** static routes `ip route`, default route
+* **Ping/Traceroute** – basic connectivity check
+
+💡 Hint: Focus on **CLI comfort** – you should navigate routers/switches without hesitation.
+
+---
+
+# 🟡 PHASE 2 – VLANs & Switching
+
+* Create VLAN: `vlan 10` → `name SALES`
+* Assign port: `switchport mode access` → `switchport access vlan 10`
+* Configure Trunk: `switchport mode trunk`
+* Inter-VLAN Routing (Router-on-a-Stick)
+
+💡 Hint: Labs should include **3 VLANs + inter-VLAN routing** to simulate real office network.
+
+---
+
+# 🟠 PHASE 3 – Routing Protocols (CCNA Level)
+
+* **RIP v2**: `router rip`, `version 2`, `network`
+* **OSPF**: `router ospf 1`, `network 192.168.x.x 0.0.0.255 area 0`
+* **EIGRP**: `router eigrp 100`, `network`, `no auto-summary`
+
+💡 Hint: Practice **multi-router topologies** with all three protocols.
+
+---
+
+# 🔴 PHASE 4 – Network Security Basics
+
+### ACLs (Access Control List)
+
+* Standard ACL: filter source IP only
+
+```bash
+access-list 1 permit 192.168.1.0 0.0.0.255
+interface g0/0
+ip access-group 1 in
+```
+
+* Extended ACL: filter IP + protocol + port
+
+```bash
+access-list 100 permit tcp 192.168.1.0 0.0.0.255 any eq 80
+```
+
+### NAT (Network Address Translation)
+
+* Static NAT: one-to-one
+* PAT / Overload: many-to-one using public IP
+
+### DHCP Server
+
+* Let router assign IP automatically to devices
+
+💡 Hint: Labs should simulate **Internet access for internal users** + **ACL filtering malicious traffic**
+
+---
+
+# 🟣 PHASE 5 – Firewalls (Job-Oriented)
+
+### 1️⃣ Cisco ASA Firewall (Basic Commands)
+
+* Basic interface: `nameif`, `security-level`, `ip address`
+* Access rules: `access-list` + `access-group`
+* NAT configuration: `nat (inside,outside)`
+
+### 2️⃣ Zone-Based Firewall (Cisco IOS)
+
+* Create zones: `zone security INSIDE`, `zone security OUTSIDE`
+* Assign interfaces to zones
+* Define policies: `zone-pair security INSIDE-TO-OUTSIDE`, `service-policy`
+
+### 3️⃣ Fortinet / Palo Alto (GNS3 VM)
+
+* Drag VM firewall into GNS3
+* Configure internal/external interfaces
+* Create policies for HTTP/HTTPS/SSH
+* Enable NAT & logging
+
+💡 Hint: Focus on **basic firewall policies**: allow inside to outside, block specific ports, NAT.
+
+---
+
+# 🟠 PHASE 6 – Advanced Security Labs
+
+### Suggested Labs to Practice
+
+1. **Internet + LAN setup with NAT**
+2. **ACL filtering malicious traffic**
+3. **VLAN + Inter-VLAN routing + ACL lab**
+4. **Firewall policy lab**: allow inside, block outside
+5. **VPN Lab (IPSec/SSL)**: remote users access internal network
+6. **HSRP + Redundancy Lab**
+
+💡 Hint: Build labs progressively in **GNS3**, use routers, switches, and firewall VM together.
+
+---
+
+# 🟢 PHASE 7 – Troubleshooting (Critical for Jobs)
+
+* Ping / Traceroute
+* Show commands: `show ip route`, `show ip interface brief`, `show access-lists`, `show ip nat translations`
+* Debug commands: `debug ip routing`, `debug ip ospf adj`
+
+💡 Hint: Employers expect you to **solve network issues quickly in labs**
+
+---
+
+# 🟡 PHASE 8 – Job-Ready Skills
+
+1. Know **GNS3 lab setup** → add routers, switches, firewall, VM
+2. Able to **configure VLAN, OSPF, EIGRP, RIP, NAT, ACL**
+3. Able to **configure firewall policies and NAT**
+4. Able to **troubleshoot routing and security issues**
+5. Able to **simulate Internet & remote user access**
+
+---
+
+# 🟠 PHASE 9 – Interview Practice
+
+* CCNA level: VLAN, OSPF, ACL, NAT
+* Security-focused: ACL rules, firewall NAT, zone policies
+* Scenario questions: “How to allow internet to LAN but block port 23?”
+
+💡 Hint: Create your own **mini-labs in GNS3** and practice answering scenario questions out loud.
+
+---
+
+# 📌 Recommended Lab Progression
+
+| Level        | Focus                              | Devices                           | GNS3 Tips                    |
+| ------------ | ---------------------------------- | --------------------------------- | ---------------------------- |
+| Beginner     | Router + Switch                    | 2-3 routers, 1 switch             | Ping, IP, Routing            |
+| Intermediate | VLAN + Inter-VLAN + ACL            | 2 routers, 2 switches             | Trunk, ACL, NAT              |
+| Advanced     | Firewall + NAT + VPN               | Router + Switch + Firewall VM     | Policies, NAT, Remote access |
+| Expert       | Multi-area OSPF + BGP + Redundancy | 4+ routers, 2+ switches, Firewall | Full enterprise topology     |
+
+---
+
+If you want, I can make a **ready-to-use GNS3 “Job Lab Pack”** with:
+
+* 3 LANs + Firewall + Internet access
+* ACL rules for security
+* NAT / PAT configuration
+* Step-by-step commands you can run immediately
+
+This will **prepare you fully for job interviews and practical tests**.
+
+Do you want me to create that lab pack next?
