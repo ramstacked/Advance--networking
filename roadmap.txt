@@ -1,0 +1,117 @@
+SOC Analyst:
+
+1. Wireshark
+2. Tcpdump
+3. Snort
+4. Suricata
+5. Nmap
+6. Volatility
+7. Autopsy
+
+---
+
+VAPT Engineer:
+
+1. Nmap
+2. Metasploit Framework
+3. Burp Suite
+4. sqlmap
+5. Nikto
+6. Gobuster
+7. ffuf
+8. OWASP ZAP
+9. Hydra
+
+---
+
+Penetration Tester:
+
+1. Nmap
+2. Metasploit Framework
+3. Burp Suite
+4. sqlmap
+5. Hydra
+6. Hashcat
+7. John the Ripper
+8. Responder
+9. CrackMapExec
+10. Impacket
+
+---
+
+Web Application Pentester:
+
+1. Burp Suite
+2. sqlmap
+3. ffuf
+4. Gobuster
+5. Nikto
+6. OWASP ZAP
+
+---
+
+Red Team:
+
+1. Metasploit Framework
+2. Cobalt Strike
+3. Empire
+4. Mimikatz
+5. BloodHound
+6. CrackMapExec
+7. Responder
+8. Impacket
+
+---
+
+Bug Bounty Hunter:
+
+1. Burp Suite
+2. sqlmap
+3. ffuf
+4. Sublist3r
+5. Amass
+6. theHarvester
+
+---
+
+Malware Analyst:
+
+1. Ghidra
+2. IDA Pro
+3. Radare2
+4. Volatility
+5. Wireshark
+
+---
+
+Digital Forensics:
+
+1. Autopsy
+2. Volatility
+3. Wireshark
+4. Tcpdump
+
+---
+
+Wireless Pentester:
+
+1. Aircrack-ng
+2. Wireshark
+
+---
+
+OSINT Analyst:
+
+1. Maltego
+2. theHarvester
+3. Amass
+4. Sublist3r
+
+---
+
+Reverse Engineer:
+
+1. Ghidra
+2. IDA Pro
+3. Radare2
+4. Binwalk
